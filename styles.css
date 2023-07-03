@@ -1,1 +1,60 @@
-/* Arquivo responsavel pelo estilo dos componentes */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+
+#navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.dropbtn {
+    color: #f2f2f2;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black !important; /* Atribui explicitamente a cor do texto aos links dentro do menu dropdown e força a aplicação dessa regra */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
