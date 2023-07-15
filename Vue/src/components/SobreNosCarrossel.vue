@@ -7,7 +7,7 @@
       img-height="480"
     >
       <b-carousel-slide>
-        <template v-slot:img="data">
+        <template v-slot:img="">
           <div class="d-flex w-100 h-100 align-items-center justify-content-center p-5"
             style="background-color: lightblue;" 
           >
@@ -16,7 +16,7 @@
         </template>
       </b-carousel-slide>
       <b-carousel-slide>
-        <template v-slot:img="data">
+        <template v-slot:img="">
           <div class="d-flex w-100 h-100 align-items-center justify-content-center p-5"
             style="background-color: lightcoral;" 
           >
@@ -25,7 +25,7 @@
         </template>
       </b-carousel-slide>
       <b-carousel-slide>
-        <template v-slot:img="data">
+        <template v-slot:img="">
           <div class="d-flex w-100 h-100 align-items-center justify-content-center p-5"
             style="background-color: lightgreen;" 
           >
