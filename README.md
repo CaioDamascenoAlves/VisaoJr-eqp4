@@ -1,70 +1,47 @@
-# Proposta de Projeto - Equipe 4 
+# Projeto Equipe 4 - Visão Jr
+Projeto frontend equipe quatro, Visão.
+# Configuração do Ambiente de Desenvolvimento
 
-Este README fornece os detalhes e requisitos necessários para começar o projeto
+Este guia ajudará você a instalar o Git, clonar um repositório do GitHub, instalar o Visual Studio Code, instalar a extensão Live Server e o NodeJS
 
-## Pré-requisitos
+## Instalação do Git
 
-1. Faça um fork da branch `dev`.
-2. Você pode escolher desenvolver usando `Vue.js` (no diretório `Vue`) ou sem nenhum framework (no diretório `sem framework`).
+### Windows
 
-## Sobre o Projeto
+1. Baixe o instalador do Git para Windows no [site oficial do Git](https://git-scm.com/download/win).
+2. Execute o instalador e siga as instruções na tela.
 
-Estamos buscando desenvolver um site para o Grupo Empresarial W&J, de propriedade de nosso cliente William. O Grupo W&J possui empresas em uma variedade de indústrias, e estamos buscando apresentar essas empresas de maneira elegante e moderna.
+### macOS
 
-### Empresas 
+1. Abra o Terminal.
+2. Verifique se o Git já está instalado digitando `git --version`.
+3. Se o Git não estiver instalado, você será solicitado a instalá-lo.
 
-As empresas dentro do Grupo W&J incluem:
+### Linux
 
-1. VisionMedia - um estúdio de produção de conteúdo para empresas de streaming.
-2. HappyHour - uma rede de restaurantes fast-food.
-3. NexusHouse - uma empresa do setor imobiliário.
-4. Mach1ne - uma rede de locadoras de carros.
-5. SkyWings Airlines - uma empresa do setor aéreo.
+1. Abra o Terminal.
+2. Para instalar o Git, digite `sudo apt-get install git` e pressione Enter.
 
-## Requisitos do Projeto
+## Clonando um Repositório do GitHub
 
-### Layout Geral
+1. Navegue até o repositório que você deseja clonar.
+2. Clique no botão "Code" e copie a URL.
+3. Abra o Terminal ou o Prompt de Comando e navegue até o diretório onde você deseja clonar o repositório.
+4. Digite `git clone URL_DO_REPOSITÓRIO` e pressione Enter.
 
-- O site precisa ter um menu fixo no topo da tela, que acompanhe o movimento de scroll do usuário.
-- Para a versão desktop, todos os botões do menu devem ser visíveis no menu fixo.
-- Para a versão mobile, deve haver um botão que abre um menu em formato de gaveta vertical com os mesmos botões do menu desktop. Essa gaveta deve se abrir suavemente.
+## Instalação do Visual Studio Code
 
-### Botões do Menu
+### Windows e macOS
 
-Os botões do menu devem incluir:
+1. Baixe o instalador do Visual Studio Code para Windows ou macOS no [site oficial do VS Code](https://code.visualstudio.com/download).
+2. Execute o instalador e siga as instruções na tela.
 
-- Início
-- Sobre Nós
-- Nossas Empresas
-  - VisionMedia
-  - HappyHour
-  - NexusHouse
-  - Mach1ne
-  - SkyWings
-- Contato
+### Linux
 
-### Seção "Sobre Nós"
+1. Abra o Terminal.
+2. Atualize os pacotes existentes digitando `sudo apt-get update`.
+3. Instale o Visual Studio Code digitando `sudo apt-get install code`.
 
-- Esta seção deve apresentar um carrossel com diferentes cores da paleta ao fundo em cada item, onde serão exibidos os itens “História”, “Valores” e “Futuro”.
+### Instalando  Node.js
 
-### Seção "Nossas Empresas"
-
-- Cada empresa deve ter uma paleta de cores única.
-- Cada empresa deve ter seu nome destacado, uma breve descrição e um botão que leva à sua respectiva página.
-- Esta seção deve ser exibida em formato de coluna.
-- A cor do menu deve mudar suavemente para combinar com a paleta de cores da empresa sendo exibida no momento.
-
-### Seção "Contato"
-
-- Esta seção deve incluir ícones para Instagram, WhatsApp, YouTube e E-mail da W&J. 
-
-## Sites de Inspiração
-
-Aqui estão alguns sites para servir de inspiração:
-
-- [Warner Media](https://www.warnermedia.com)
-- [Grupo Globo](https://grupoglobo.globo.com)
-
-Incorpore seu próprio estilo pessoal ao projeto. 
-
-Boa sorte e feliz codificação!
+1. Baixe o instalador do Node.js no [site oficial](https://nodejs.org/en/download/) e siga as instruções de instalação.
