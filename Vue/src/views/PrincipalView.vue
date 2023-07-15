@@ -13,6 +13,10 @@
       <section id="contato">
         <!-- Conteúdo da seção Contato aqui -->
       </section>
+
+      <section id="footer">
+        <Footer />
+      </section>
     </div>
   </template>
   
@@ -20,12 +24,14 @@
   import Navbar from '../components/Navbar.vue'
   import SobreNosCarrossel from '../components/SobreNosCarrossel.vue'
   import NossasEmpresas from '../components/NossasEmpresas.vue'
+  import Footer from '../components/FooterComp.vue'
   
   export default {
     components: {
       Navbar,
       SobreNosCarrossel,
-      NossasEmpresas
+      NossasEmpresas,
+      Footer
     }
   }
   </script>
