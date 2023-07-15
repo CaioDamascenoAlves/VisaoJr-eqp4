@@ -1,6 +1,6 @@
 # Proposta de Projeto - Equipe 4 
 
-Este README fornece os detalhes e requisitos necessários para começar o projeto
+Este README fornece os detalhes e requisitos necessários para começar o projeto.
 
 ## Pré-requisitos
 

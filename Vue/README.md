@@ -8,13 +8,13 @@ Descrição de como configurar o ambiente de desenvolvimento para este projeto.
 
 ## Passo a passo
 
-### 4. Instalando as dependências do projeto
+### 1. Instalando as dependências do projeto
 Ainda no terminal, execute o seguinte comando para instalar as dependências do projeto:
 
 ```
 npm install
 ```
-### 5. Iniciando o servidor de desenvolvimento
+### 2. Iniciando o servidor de desenvolvimento
 Ainda no terminal, execute o seguinte comando para iniciar o servidor de desenvolvimento:
 ```
 npm run serve

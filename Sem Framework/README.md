@@ -1,11 +1,11 @@
-## Instalação da Extensão Live Server no Visual Studio Code
+# Instalação da Extensão Live Server no Visual Studio Code
 
 1. Abra o Visual Studio Code.
 2. Clique no ícone de extensões na barra lateral esquerda.
 3. Pesquise por "Live Server" na caixa de pesquisa.
 4. Clique no botão "Install" na extensão Live Server.
 
-## Rodando o Site com o Live Server
+# Rodando o Site com o Live Server
 
 Depois de instalar o Live Server no Visual Studio Code, siga os passos abaixo para rodar o site:
 
