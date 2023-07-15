@@ -44,4 +44,4 @@ Este guia ajudará você a instalar o Git, clonar um repositório do GitHub, ins
 
 ### Instalando  Node.js
 
-1. Baixe o instalador do Node.js no [site oficial](https://nodejs.org/en/download/) e siga as instruções de instalação.
+1.Baixe o instalador do Node.js no [site oficial](https://nodejs.org/en/download/) e siga as instruções de instalação.
