@@ -1,5 +1,12 @@
 # Projeto Equipe 4 - Visão Jr
 Projeto frontend equipe quatro, Visão.
+
+# Organização dos Diretórios
+
+- A proposta e requisitos do projeto podem ser encontrados na pasta `Proposta Projeto`.
+- O projeto sem o uso de framework deve ser desenvolvido na pasta `Sem framework`.
+- O projeto usando o framework VueJS deve ser desenvolvido na pasta `Vue`.
+  
 # Configuração do Ambiente de Desenvolvimento
 
 Este guia ajudará você a instalar o Git, clonar um repositório do GitHub, instalar o Visual Studio Code, instalar a extensão Live Server e o NodeJS
