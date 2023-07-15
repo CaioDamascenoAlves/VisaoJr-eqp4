@@ -1,53 +1,70 @@
-# Projeto Vue 
+# Proposta de Projeto - Equipe 4 
 
-Este README descreve como configurar o ambiente de desenvolvimento para este projeto.
+Este README fornece os detalhes e requisitos necessários para começar o projeto
 
 ## Pré-requisitos
 
-- [Git](https://git-scm.com/download/win)
-- [Node.js](https://nodejs.org/en/download/)
+1. Faça um fork da branch `dev`.
+2. Você pode escolher desenvolver usando `Vue.js` (no diretório `Vue`) ou sem nenhum framework (no diretório `sem framework`).
 
-## Passo a passo
+## Sobre o Projeto
 
-### 1. Instalando o Git
+Estamos buscando desenvolver um site para o Grupo Empresarial W&J, de propriedade de nosso cliente William. O Grupo W&J possui empresas em uma variedade de indústrias, e estamos buscando apresentar essas empresas de maneira elegante e moderna.
 
-Baixe o instalador do Git no [site oficial](https://git-scm.com/download/win) e siga as instruções de instalação.
+### Empresas 
 
-### 2. Instalando o Node.js
+As empresas dentro do Grupo W&J incluem:
 
-Baixe o instalador do Node.js no [site oficial](https://nodejs.org/en/download/) e siga as instruções de instalação.
+1. VisionMedia - um estúdio de produção de conteúdo para empresas de streaming.
+2. HappyHour - uma rede de restaurantes fast-food.
+3. NexusHouse - uma empresa do setor imobiliário.
+4. Mach1ne - uma rede de locadoras de carros.
+5. SkyWings Airlines - uma empresa do setor aéreo.
 
-### 3. Clonando o repositório
+## Requisitos do Projeto
 
-Abra o terminal e execute o seguinte comando para clonar o repositório:
+### Layout Geral
 
-```bash
-git clone https://github.com/username/repository.git
-```
+- O site precisa ter um menu fixo no topo da tela, que acompanhe o movimento de scroll do usuário.
+- Para a versão desktop, todos os botões do menu devem ser visíveis no menu fixo.
+- Para a versão mobile, deve haver um botão que abre um menu em formato de gaveta vertical com os mesmos botões do menu desktop. Essa gaveta deve se abrir suavemente.
 
-#### Certifique-se de substituir "username" e "repository" pelo nome de usuário e o nome do repositório, respectivamente.
+### Botões do Menu
 
-### 4. Navegando até a pasta do projeto
-Ainda no terminal, navegue até a pasta Vue do projeto utilizando o comando cd:
+Os botões do menu devem incluir:
 
-```
-cd Vue
-```
-Substitua "repository" pelo nome do repositório que você clonou.
+- Início
+- Sobre Nós
+- Nossas Empresas
+  - VisionMedia
+  - HappyHour
+  - NexusHouse
+  - Mach1ne
+  - SkyWings
+- Contato
 
-### 5. Instalando as dependências do projeto
-Ainda no terminal, execute o seguinte comando para instalar as dependências do projeto:
+### Seção "Sobre Nós"
 
-```
-npm install
-```
-### 6. Iniciando o servidor de desenvolvimento
-Ainda no terminal, execute o seguinte comando para iniciar o servidor de desenvolvimento:
-```
-npm run serve
-```
-Agora, o servidor do projeto deve estar rodando localmente na sua máquina. Você pode acessar o projeto no navegador através do endereço: http://localhost:8080.
+- Esta seção deve apresentar um carrossel com diferentes cores da paleta ao fundo em cada item, onde serão exibidos os itens “História”, “Valores” e “Futuro”.
 
-### Pronto!
-Parabéns, agora você deve estar rodando o projeto localmente em seu computador. Se você encontrar qualquer problema, por favor abra uma issue no repositório do GitHub.
+### Seção "Nossas Empresas"
 
+- Cada empresa deve ter uma paleta de cores única.
+- Cada empresa deve ter seu nome destacado, uma breve descrição e um botão que leva à sua respectiva página.
+- Esta seção deve ser exibida em formato de coluna.
+- A cor do menu deve mudar suavemente para combinar com a paleta de cores da empresa sendo exibida no momento.
+
+### Seção "Contato"
+
+- Esta seção deve incluir ícones para Instagram, WhatsApp, YouTube e E-mail da W&J. 
+
+## Sites de Inspiração
+
+Aqui estão alguns sites para servir de inspiração:
+
+- [Warner Media](https://www.warnermedia.com)
+- [Grupo Globo](https://grupoglobo.globo.com)
+
+Incorpore seu próprio estilo pessoal ao projeto. 
+
+Boa sorte e feliz codificação!
