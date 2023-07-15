@@ -2,11 +2,6 @@
 
 Este README fornece os detalhes e requisitos necessários para começar o projeto
 
-## Pré-requisitos
-
-1. Faça um fork da branch `dev`.
-2. Você pode escolher desenvolver usando `Vue.js` (no diretório `Vue`) ou sem nenhum framework (no diretório `sem framework`).
-
 ## Sobre o Projeto
 
 Estamos buscando desenvolver um site para o Grupo Empresarial W&J, de propriedade de nosso cliente William. O Grupo W&J possui empresas em uma variedade de indústrias, e estamos buscando apresentar essas empresas de maneira elegante e moderna.
