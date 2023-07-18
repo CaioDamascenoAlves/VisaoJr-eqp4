@@ -4,16 +4,14 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import store from './store'
 
 Vue.config.productionTip = false;
-Vue.config.devtools = true;
-Vue.config.debug = true;
-Vue.config.silent = false;
-
 Vue.use(BootstrapVue)
 
 new Vue({
+  store,
   router,
-  render: h => h(App)
+  render: function (h) { return h(App) }
 }).$mount('#app')
+
