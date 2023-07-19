@@ -101,6 +101,16 @@ export default {
           const index = this.$refs.empresaSections.indexOf(entry.target);
           this.updateNavbarColor(index);
         }
+
+        const lastSectionIndex = this.$refs.empresaSections.length - 1;
+        if (
+          !entry.isIntersecting &&
+          entry.target === this.$refs.empresaSections[lastSectionIndex]
+        ) {
+          // A última seção saiu da viewport, defina a cor da barra de navegação para os valores padrão
+          this.setNavbarColor("#1D2547");
+          this.setTextColor("#D6A248");
+        }
       });
     }, options);
 
@@ -110,13 +120,15 @@ export default {
 
     // Código novo para lidar com o scroll
     window.addEventListener("scroll", () => {
-      const halfHeight = window.innerHeight * .1;
+      const halfHeight = window.innerHeight * 0.1;
       if (window.scrollY >= halfHeight) {
         this.isPageScrolled = true;
         const index = this.$refs.empresaSections.findIndex(
           (section) => section.getBoundingClientRect().bottom > halfHeight
         );
-        this.updateNavbarColor(index);
+        if (index !== -1) {
+          this.updateNavbarColor(index);
+        }
       } else {
         // Redefina a cor da barra de navegação para os valores padrão quando o usuário rola de volta para o topo da página
         this.setNavbarColor("#1D2547");
