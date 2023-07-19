@@ -1,8 +1,8 @@
 <template>
   <b-carousel
     controls
-    no-indicators
     background="#ababab"
+    background-opacity="0.5"
     img-width="1024"
     img-height="480"
   >
@@ -12,6 +12,7 @@
           style="background-color: lightblue;" 
         >
           <h1>História</h1>
+          
         </div>
       </template>
     </b-carousel-slide>
