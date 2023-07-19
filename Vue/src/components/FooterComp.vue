@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer py-3 bg-dark text-white">
+  <footer class="footer py-3 " style="background-color: #1D2547" >
     <b-container>
       <b-row>
         <b-col class="d-flex justify-content-start ">
