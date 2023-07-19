@@ -7,12 +7,12 @@
     :style="navbarStyle"
   >
     <b-navbar-brand :style="navTextStyle">Visão</b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse" ></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
+      <b-navbar-nav class="ml-auto" >
         <b-nav-item :style="navTextStyle" to="/">Início</b-nav-item>
         <b-nav-item :style="navTextStyle" to="/sobre-nos">Sobre Nós</b-nav-item>
-        <b-nav-item-dropdown text="Nossas Empresas" right>
+        <b-nav-item-dropdown text="Nossas Empresas"  >
           <b-dropdown-item
             v-for="(empresa, index) in empresas"
             :key="index"
@@ -42,8 +42,6 @@ export default {
       return {
         backgroundColor: this.navbarColor,
         color: this.textColor,
-        '--navbar-color': this.textColor,
-
       };
     },
   },
@@ -56,6 +54,9 @@ export default {
         { name: "Mach1ne" },
         { name: "SkyWings" },
       ],
+      navTextStyle: {
+      color: '' // Substitute this with the actual style you want
+    },
     };
   },
   methods: {
@@ -77,21 +78,13 @@ export default {
 .navbar-nav a {
   color: inherit;
 }
-
-/* Corrigindo o alinhamento */
-.navbar-nav {
-  align-items: center;
-}
-
 /* Mudando a cor da seta do dropdown */
 .dropdown-toggle::after {
   border-top-color: #D6A248; 
 }
 
 /* Mudando a cor do ícone do menu hambúrguer */
-.navbar-toggler-icon {
-  filter: invert(58%) sepia(64%) saturate(2777%) hue-rotate(359deg) brightness(98%) contrast(102%);
-}
+
 
 @media (max-width: 992px) {
   .navbar-nav .dropdown-menu {
@@ -100,7 +93,7 @@ export default {
     background-color: transparent;
     border: none;
     box-shadow: none;
-    color: var(--text-color);
+    width: 100%;
   }
 }
 </style>
