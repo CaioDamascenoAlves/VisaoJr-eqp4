@@ -24,74 +24,82 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   data() {
     return {
       empresas: [
         {
-          name: 'NexusHouse',
-          description: 'Descrição da NexusHouse',
-          navbarColor: '#C5282F',
-          textColor: '#ffffff',
-          logo: 'logo.png',
+          name: "NexusHouse",
+          description: "Descrição da NexusHouse",
+          navbarColor: "#C5282F",
+          textColor: "#ffffff",
+          logo: "logo.png",
         },
         {
-          name: 'HappyHour',
-          description: 'Descrição do HappyHour',
-          navbarColor: '#FFAD00',
-          textColor: '#ffffff',
-          logo: 'logo.png',
+          name: "HappyHour",
+          description: "Descrição do HappyHour",
+          navbarColor: "#FFAD00",
+          textColor: "#ffffff",
+          logo: "logo.png",
         },
         {
-          name: 'VisionMedia',
-          description: 'Descrição da VisionMedia',
-          navbarColor: '#00DB59',
-          textColor: '#ffffff',
-          logo: 'visionMedia.jpg',
+          name: "VisionMedia",
+          description: "Descrição da VisionMedia",
+          navbarColor: "#00DB59",
+          textColor: "#ffffff",
+          logo: "visionMedia.jpg",
         },
         {
-          name: 'Mach1ne',
-          description: 'Descrição da Mach1ne',
-          navbarColor: '#58C2EC',
-          textColor: '#ffffff',
-          logo: 'logo.png',
+          name: "Mach1ne",
+          description: "Descrição da Mach1ne",
+          navbarColor: "#58C2EC",
+          textColor: "#ffffff",
+          logo: "logo.png",
         },
         {
-          name: 'SkyWings',
-          description: 'Descrição da SkyWings',
-          navbarColor: '#B91AA8',
-          textColor: '#ffffff',
-          logo: 'logo.png',
+          name: "SkyWings",
+          description: "Descrição da SkyWings",
+          navbarColor: "#B91AA8",
+          textColor: "#ffffff",
+          logo: "logo.png",
         },
       ],
       selectedEmpresa: null,
       navbarColorsInitialized: false,
       interacted: false, // Adiciona novo estado 'interacted'
+      isPageScrlled: false, // Adiciona novo estado 'isPageScrolled'
     };
   },
   methods: {
-    ...mapActions(['setCurrentVariant', 'setNavbarColor', 'setTextColor']), // Adicione as actions aqui
+    ...mapActions(["setCurrentVariant", "setNavbarColor", "setTextColor"]), // Adicione as actions aqui
     selectEmpresa(index) {
       this.selectedEmpresa = index;
       this.navbarColorsInitialized = true;
       this.setNavbarColor(this.empresas[index].navbarColor);
       this.setTextColor(this.empresas[index].textColor);
     },
+    // Adicione o método updateNavbarColor
+    updateNavbarColor(index) {
+      if (this.isPageScrolled) {
+        this.setNavbarColor(this.empresas[index].navbarColor);
+        this.setTextColor(this.empresas[index].textColor);
+      }
+    },
   },
   mounted() {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "1%", // Altere esta linha
       threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && this.interacted) {
+        if (entry.isIntersecting && this.isPageScrolled) {
           const index = this.$refs.empresaSections.indexOf(entry.target);
-          this.selectEmpresa(index);
+          this.updateNavbarColor(index);
         }
       });
     }, options);
@@ -101,27 +109,27 @@ export default {
     });
 
     // Código novo para lidar com o scroll
-    window.addEventListener('scroll', () => {
-      const halfHeight = window.innerHeight / 2;
-      if (window.scrollY < halfHeight && this.navbarColorsInitialized) {
-        this.interacted = false;
+    window.addEventListener("scroll", () => {
+      const halfHeight = window.innerHeight * .1;
+      if (window.scrollY >= halfHeight) {
+        this.isPageScrolled = true;
+        const index = this.$refs.empresaSections.findIndex(
+          (section) => section.getBoundingClientRect().bottom > halfHeight
+        );
+        this.updateNavbarColor(index);
+      } else {
+        // Redefina a cor da barra de navegação para os valores padrão quando o usuário rola de volta para o topo da página
         this.setNavbarColor("#1D2547");
         this.setTextColor("#D6A248");
-      } else if (window.scrollY >= halfHeight) {
-        this.interacted = true;
       }
     });
   },
 };
 </script>
 
-
-
-
-
 <style scoped>
 .empresa {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   min-height: 100vh; /* Para cada empresa ocupar uma página inteira */
 }
 .empresa {
