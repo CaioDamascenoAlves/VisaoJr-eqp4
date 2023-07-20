@@ -15,8 +15,12 @@
       <FaleConoscoVue />
     </section>
 
+    <section id="redesociais">
+      <RedesSociais/>
+    </section>
+
     <section id="footer">
-      <Footer />
+      <Footer/>
     </section>
 
   </div>
@@ -28,6 +32,7 @@ import SobreNosCarrossel from "../components/SobreNosCarrossel.vue";
 import NossasEmpresas from "../components/NossasEmpresas.vue";
 import Footer from "../components/FooterComp.vue";
 import FaleConoscoVue from "../components/FaleConosco.vue";
+import RedesSociais from "../components/RedesSociais.vue";
 
 export default {
   components: {
@@ -36,6 +41,7 @@ export default {
     NossasEmpresas,
     Footer,
     FaleConoscoVue,
+    RedesSociais,
   },
 };
 </script>
