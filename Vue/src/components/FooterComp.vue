@@ -3,7 +3,7 @@
     <b-container>
       <b-row>
         <b-col class="d-flex justify-content-start ">
-          Desenvolvido por: Equipe 4
+          Desenvolvido por: Equipe 4 treinee Visao Jr
         </b-col>
         <b-col class="d-flex justify-content-end">
           <div class="d-flex align-items-center">
