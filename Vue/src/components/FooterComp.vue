@@ -9,8 +9,8 @@
           <div class="d-flex align-items-center">
             <div class="mr-5">
               <b-row>
-                <b-col>info@empresa.com</b-col>
-                <b-col>(123) 456-7890</b-col>
+                <b-col> <font-awesome-icon :icon="['fas', 'fa-location-dot']"/> ola@wej.com.br</b-col>
+                <b-col><font-awesome-icon :icon="['fas', 'fa-envelope']"/>(123) 456-7890</b-col>
               </b-row>
               <div>Endereço: Rua das Flores, 123, Cidade, Estado</div>
             </div>
