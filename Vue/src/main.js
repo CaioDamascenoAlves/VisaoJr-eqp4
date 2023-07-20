@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import BootstrapVue from 'bootstrap-vue'
+import {BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import store from './store'
 import Vuelidate from 'vuelidate';
 import VueSweetalert2 from 'vue-sweetalert2';
@@ -14,7 +14,8 @@ import './assets/icons';
 
 Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);
-Vue.use(BootstrapVue)
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 Vue.config.productionTip = false;
 

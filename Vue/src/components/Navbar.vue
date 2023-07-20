@@ -7,17 +7,30 @@
     :style="navbarStyle"
   >
     <b-navbar-brand :style="navTextStyle">Visão</b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse" ></b-navbar-toggle>
+    <b-navbar-toggle target="nav-collapse">
+      <template #default="{ expanded }">
+        <b-icon
+          v-if="expanded"
+          icon="chevron-bar-up"
+          :style="toggleStyle"
+        ></b-icon>
+        <b-icon v-else icon="chevron-bar-down" :style="toggleStyle"></b-icon>
+      </template>
+    </b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto" >
+      <b-navbar-nav class="ml-auto">
         <b-nav-item :style="navTextStyle" to="/">Início</b-nav-item>
         <b-nav-item :style="navTextStyle" to="/sobre-nos">Sobre Nós</b-nav-item>
-        <b-nav-item-dropdown text="Nossas Empresas"  >
+        <b-nav-item-dropdown :style="navTextStyle">
+          <template #button-content>
+            <span :style="navTextStyle">Nossas Empresas</span>
+          </template>
           <b-dropdown-item
             v-for="(empresa, index) in empresas"
             :key="index"
             :to="empresa.to"
             :style="navTextStyle"
+            @click="scrollToEmpresa(index)"
           >
             {{ empresa.name }}
           </b-dropdown-item>
@@ -32,32 +45,35 @@
 import { mapState } from "vuex";
 
 export default {
+  data() {
+    return {
+      empresas: [
+        { name: "VisionMedia", to: "/vision" },
+        { name: "HappyHour", to: "/happy-hour" },
+        { name: "NexusHouse", to: "/nexus-house" },
+        { name: "Mach1ne", to: "/mach1ne" },
+        { name: "SkyWings", to: "/sky-wings" },
+      ],
+    };
+  },
   computed: {
-    ...mapState({
-      currentVariant: (state) => state.currentVariant,
-      navbarColor: (state) => state.navbarColor,
-      textColor: (state) => state.textColor,
-    }),
+    ...mapState(["currentVariant", "navbarColor", "textColor"]),
     navbarStyle() {
       return {
         backgroundColor: this.navbarColor,
         color: this.textColor,
       };
     },
-  },
-  data() {
-    return {
-      empresas: [
-        { name: "VisionMedia" },
-        { name: "HappyHour" },
-        { name: "NexusHouse" },
-        { name: "Mach1ne" },
-        { name: "SkyWings" },
-      ],
-      navTextStyle: {
-      color: '' // Substitute this with the actual style you want
+    navTextStyle() {
+      return {
+        color: this.textColor,
+      };
     },
-    };
+    toggleStyle() {
+      return {
+        color: this.textColor,
+      };
+    },
   },
   methods: {
     updateNavbarColor({ navbarColor, textColor }) {
@@ -78,13 +94,16 @@ export default {
 .navbar-nav a {
   color: inherit;
 }
+
 /* Mudando a cor da seta do dropdown */
 .dropdown-toggle::after {
-  border-top-color: #D6A248; 
+  border-top-color: #d6a248;
 }
 
 /* Mudando a cor do ícone do menu hambúrguer */
-
+.custom-icon-color {
+  color: #ff0000; /* Substitua #ff0000 pela cor desejada */
+}
 
 @media (max-width: 992px) {
   .navbar-nav .dropdown-menu {
