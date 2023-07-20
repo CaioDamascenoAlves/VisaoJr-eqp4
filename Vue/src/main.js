@@ -10,6 +10,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'sweetalert2/dist/sweetalert2.min.css';
 
+import './assets/icons';
+
 Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);
 Vue.use(BootstrapVue)
