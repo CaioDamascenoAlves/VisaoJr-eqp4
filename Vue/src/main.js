@@ -12,6 +12,8 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 import './assets/icons';
 
+import './assets/css/global.css'
+
 Vue.use(Vuelidate);
 Vue.use(VueSweetalert2);
 Vue.use(BootstrapVue);
