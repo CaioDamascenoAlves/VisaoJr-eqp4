@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <section id="inicio">
-      <!-- Conteúdo da seção Início aqui -->
+      <Inicio/>
     </section>
     <section id="sobre-nos">
       <SobreNosCarrossel />
@@ -23,11 +23,12 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
+import Navbar from "../components/Navbar/Navbar.vue";
 import SobreNosCarrossel from "../components/SobreNosCarrossel.vue";
 import NossasEmpresas from "../components/NossasEmpresas.vue";
 import Footer from "../components/FooterComp.vue";
 import FaleConoscoVue from "../components/FaleConosco.vue";
+import Inicio from "../components/Inicio.vue";
 
 export default {
   components: {
@@ -36,6 +37,7 @@ export default {
     NossasEmpresas,
     Footer,
     FaleConoscoVue,
+    Inicio,
   },
 };
 </script>
