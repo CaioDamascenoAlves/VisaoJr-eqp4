@@ -5,18 +5,25 @@
       :key="empresa.name"
       ref="empresaSections"
       class="empresa"
-    >
+      >
       <div class="empresa-content">
-        <div class="empresa-info">
-          <h2>{{ empresa.name }}</h2>
-          <p>{{ empresa.description }}</p>
-          <b-button @click="selectEmpresa(index)">Ver mais</b-button>
-        </div>
         <div class="empresa-logo">
           <img
             :src="require(`../assets/${empresa.logo}`)"
             alt="Logo da Empresa"
           />
+        </div>
+        <div class="empresa-info">
+          <div class="text-center">
+           <h2 class="title">{{ empresa.title }}</h2>
+            <h2 class="subtitle">{{ empresa.subtitle}}</h2>
+          </div>
+          <div class="text-center">
+            <p>{{ empresa.description }}</p>
+          </div>
+          <div class="text-center">
+            <b-button style="box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);" squared id="botao-content" @click="selectEmpresa(index)">Ver mais</b-button>
+          </div>
         </div>
       </div>
     </div>
@@ -32,20 +39,26 @@ export default {
       empresas: [
         {
           name: "NexusHouse",
+          title: "",
+          subtitle: "",
           description: "Descrição da NexusHouse",
           navbarColor: "#C5282F",
           textColor: "#ffffff",
-          logo: "logo.png",
+          logo: "Logo Wj Ori.png",
         },
         {
           name: "HappyHour",
-          description: "Descrição do HappyHour",
+          title: "O MAIS PEDIDO, O",
+          subtitle: "MAIS SABOROSO",
+          description: "O Happy Hour é um fast food popular, conhecido por oferecer refeições rápidas e saborosas a preços acessíveis. Com um menu diversificado, que inclui hambúrgueres, batatas fritas, sanduíches, saladas e sobremesas, o Happy Hour atende às preferências de diferentes paladares.",
           navbarColor: "#FFAD00",
           textColor: "#ffffff",
-          logo: "logo.png",
+          logo: "Teste.png",
         },
         {
           name: "VisionMedia",
+          title: "",
+          subtitle: "",
           description: "Descrição da VisionMedia",
           navbarColor: "#00DB59",
           textColor: "#ffffff",
@@ -53,6 +66,8 @@ export default {
         },
         {
           name: "Mach1ne",
+          title: "SOMOS A LÍDER",
+          subtitle: "DO MERCADO",
           description: "Descrição da Mach1ne",
           navbarColor: "#58C2EC",
           textColor: "#ffffff",
@@ -60,6 +75,8 @@ export default {
         },
         {
           name: "SkyWings",
+          title: "",
+          subtitle: "",
           description: "Descrição da SkyWings",
           navbarColor: "#B91AA8",
           textColor: "#ffffff",
@@ -140,6 +157,27 @@ export default {
 </script>
 
 <style scoped>
+
+.title
+{
+  line-height: 0.8;
+  font-size: 50px;
+}
+
+.subtitle
+{
+  line-height: 0.8;
+  font-size: 60px;
+  margin-top: 0;
+}
+
+#botao-content
+  {
+    background-color: #ffffff;
+    color: #D6A248;
+    border-color: #ffffff;
+    align-content: center;
+  }
 .empresa {
   margin-bottom: 0px;
   min-height: 100vh; /* Para cada empresa ocupar uma página inteira */
@@ -180,7 +218,10 @@ export default {
 
 .empresa-info {
   flex: 1;
+  margin-top: 100px;
+  margin-bottom: auto;
 }
+
 
 .empresa-logo {
   flex: 1;

@@ -5,6 +5,10 @@
     :variant="currentVariant"
     class="mb-5"
     :style="navbarStyle"
+    style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"
+
+
+
   >
     <b-navbar-brand :style="navTextStyle">Visão</b-navbar-brand>
     <b-navbar-toggle target="nav-collapse" ></b-navbar-toggle>
