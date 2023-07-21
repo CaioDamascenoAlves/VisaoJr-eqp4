@@ -1,0 +1,15 @@
+/* src/assets/css/global.css */
+
+/* Importe a fonte Body Grotesque Fit Trial Regular */
+@font-face {
+    font-family: 'Popins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf') format('trueType');
+    font-weight: normal;
+    font-style: media;
+  }
+  
+  /* Outros estilos globais aqui */
+  /* Aplicar a fonte personalizada globalmente */
+  body {
+    font-family: 'Popins-Medium'; /* Substitua 'sans-serif' pela fonte de fallback desejada */
+  }

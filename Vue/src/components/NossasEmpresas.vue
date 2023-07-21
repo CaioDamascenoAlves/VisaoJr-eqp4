@@ -87,11 +87,13 @@ export default {
         this.setTextColor(this.empresas[index].textColor);
       }
     },
+
+    
   },
   mounted() {
     const options = {
       root: null,
-      rootMargin: "1%", // Altere esta linha
+      rootMargin: "10%", // Altere esta linha
       threshold: 0.1,
     };
 
@@ -120,7 +122,7 @@ export default {
 
     // Código novo para lidar com o scroll
     window.addEventListener("scroll", () => {
-      const halfHeight = window.innerHeight * 0.1;
+      const halfHeight = window.innerHeight / 2;
       if (window.scrollY >= halfHeight) {
         this.isPageScrolled = true;
         const index = this.$refs.empresaSections.findIndex(
