@@ -7,9 +7,10 @@
       class="empresa"
     >
       <div class="empresa-content">
-        <div class="empresa-info">
-          <h2>{{ empresa.name }}</h2>
-          <p>{{ empresa.description }}</p>
+        <div class="empresa-info h-5">
+          <h2>{{ empresa.name }} </h2>
+          <h1>{{ empresa.name2 }}</h1>
+          <p>{{ empresa.description }}</p> 
           <b-button @click="selectEmpresa(index)">Ver mais</b-button>
         </div>
         <div class="empresa-logo">
@@ -31,11 +32,12 @@ export default {
     return {
       empresas: [
         {
-          name: "NexusHouse",
-          description: "Descrição da NexusHouse",
+          name: "ATUAMOS EM MAIS",
+          name2: "DE 100 PAÍSES",
+          description: "A empresa oferece uma ampla gama de serviços, incluindo compra, venda e aluguel de propriedades residenciais e comerciais. Com uma equipe de corretores altamente capacitados, a Nexus House auxilia os clientes em todas as etapas do processo imobiliário",
           navbarColor: "#C5282F",
           textColor: "#ffffff",
-          logo: "logo.png",
+          logo: "NexusHouse.jpg",
         },
         {
           name: "HappyHour",
@@ -45,11 +47,12 @@ export default {
           logo: "logo.png",
         },
         {
-          name: "VisionMedia",
-          description: "Descrição da VisionMedia",
+          name: "OS MELHORES",
+          name2: "CONTEÚDOS",
+          description: "A VisonMedia é uma empresa de streaming que oferece uma ampla seleção de conteúdos audiovisuais, proporcionando uma experiência de entretenimento personalizada aos assinantes. Com qualidade de streaming excepcional e uma variedade de opções de assinatura, a VisonMedia é uma escolha popular para os amantes de filmes e séries.",
           navbarColor: "#00DB59",
           textColor: "#ffffff",
-          logo: "visionMedia.jpg",
+          logo: "VisionMedia.jpg",
         },
         {
           name: "Mach1ne",
@@ -59,11 +62,12 @@ export default {
           logo: "logo.png",
         },
         {
-          name: "SkyWings",
-          description: "Descrição da SkyWings",
+          name: "SUA SEGURANÇA",
+          name2: "EM 1ºLUGAR",
+          description: "A Sky Wings Airlines é uma empresa líder no setor da aviação, oferecendo voos de alta qualidade e confiabilidade. Com uma frota moderna e uma equipe altamente capacitada, eles se destacam por garantir voos seguros, confortáveis e pontuais para os passageiros, proporcionando uma experiência de viagem excepcional. ",
           navbarColor: "#B91AA8",
           textColor: "#ffffff",
-          logo: "logo.png",
+          logo: "SkyWings.jpg",
         },
       ],
       selectedEmpresa: null,
@@ -180,6 +184,8 @@ export default {
 
 .empresa-info {
   flex: 1;
+  text-align: center;
+  font-size: 30px;
 }
 
 .empresa-logo {
@@ -190,6 +196,12 @@ export default {
 .empresa-logo img {
   max-width: 100%;
   height: auto;
+}
+h2 {
+  font-size: 70px; /* Defina o tamanho da fonte em pixels */
+}
+h1 {
+  font-size: 90px; /* Defina o tamanho da fonte em pixels */
 }
 
 /* Estilos para a empresa selecionada */
