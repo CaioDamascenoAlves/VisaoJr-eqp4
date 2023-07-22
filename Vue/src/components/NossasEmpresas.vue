@@ -14,15 +14,17 @@
           />
         </div>
         <div class="empresa-info">
-          <div class="text-center">
+          <div class="text-center app-margin ">
            <h2 class="title">{{ empresa.title }}</h2>
             <h2 class="subtitle">{{ empresa.subtitle}}</h2>
           </div>
-          <div class="text-center">
-            <p>{{ empresa.description }}</p>
+          <div class=" text-center app-font-size">
+            <p class=" app-justify app-limit-width">{{ empresa.description }}</p>
           </div>
           <div class="text-center">
-            <b-button style="box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);" squared id="botao-content" @click="selectEmpresa(index)">Ver mais</b-button>
+            <b-button ref="botaoContent" squared id="botao-content" @click="selectEmpresa(index)" :style="{ backgroundColor: empresa.botaoBgColor, color: empresa.botaoTextColor }">
+            {{ empresa.buttonContent }}
+            </b-button>
           </div>
         </div>
       </div>
@@ -54,6 +56,8 @@ export default {
           navbarColor: "#FFAD00",
           textColor: "#ffffff",
           logo: "Teste.png",
+          buttonContent: "PEÇA AGORA",
+          botaoTextColor: "#ffad00",
         },
         {
           name: "VisionMedia",
@@ -72,6 +76,8 @@ export default {
           navbarColor: "#58C2EC",
           textColor: "#ffffff",
           logo: "logo.png",
+          buttonContent: "ALUGUE AGORA",
+          botaoTextColor: "#58c2ec",
         },
         {
           name: "SkyWings",
@@ -158,21 +164,43 @@ export default {
 
 <style scoped>
 
+.app-limit-width {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.app-justify {
+  text-align: justify;
+}
+
+.app-margin {
+  margin-bottom: 60px;
+}
+
+
+.app-font-size {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
 .title
 {
   line-height: 0.8;
-  font-size: 50px;
+  font-size: 70px;
 }
 
 .subtitle
 {
   line-height: 0.8;
-  font-size: 60px;
+  font-size: 80px;
   margin-top: 0;
 }
 
+
+
 #botao-content
   {
+    font-size: 24px;
+    margin-top: 100px;
     background-color: #ffffff;
     color: #D6A248;
     border-color: #ffffff;
