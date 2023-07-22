@@ -3,18 +3,18 @@
     <b-container>
       <b-row>
         <b-col class="d-flex justify-content-start ">
-          Desenvolvido por: Equipe 4
+          Desenvolvido por : <strong>Equipe 4 Treinee Visao Jr </strong> 
         </b-col>
         <b-col class="d-flex justify-content-end">
           <div class="d-flex align-items-center">
             <div class="mr-5">
               <b-row>
-                <b-col> <font-awesome-icon :icon="['fas', 'fa-location-dot']"/> ola@wej.com.br</b-col>
-                <b-col><font-awesome-icon :icon="['fas', 'fa-envelope']"/>(123) 456-7890</b-col>
+                <b-col><font-awesome-icon :icon="['fas', 'fa-envelope']"/> ola@wej.com.br</b-col>
+                <b-col><font-awesome-icon :icon="['fas', 'fa-phone']"/>(123) 456-7890</b-col>
               </b-row>
-              <div>Endereço: Rua das Flores, 123, Cidade, Estado</div>
+              <div><font-awesome-icon :icon="['fas', 'fa-location-dot']"/> Endereço: Rua das Flores, 123, Cidade, Estado</div>
             </div>
-            <img src="../assets/logo.png" alt="Logo" height="50px"/>
+            <img src=" Vue\src\assets\imgs\Logo WJ Branca.png " alt="Logo"  height="50px"/>  
           </div>
         </b-col>
       </b-row>

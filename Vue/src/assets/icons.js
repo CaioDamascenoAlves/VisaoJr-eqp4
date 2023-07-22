@@ -15,6 +15,8 @@ import {
   faDroplet,
   faLocationDot,
   faEnvelope,
+  faPhone,
+
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 library.add(
@@ -32,5 +34,6 @@ library.add(
   faDroplet,
   faLocationDot,
   faEnvelope,
+  faPhone,
 );
 Vue.component("font-awesome-icon", FontAwesomeIcon);
