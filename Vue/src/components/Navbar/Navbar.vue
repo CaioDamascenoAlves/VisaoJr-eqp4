@@ -5,10 +5,14 @@
     :variant="currentVariant"
     class="mb-5"
     :style="navbarStyle"
+    style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"
   >
-  <b-navbar-brand>
+    <!-- Logotipo (imagem) à esquerda -->
+    <b-navbar-brand>
       <img src="../../assets/imgs/LogoWjOri.png" alt="Logo" class="navbar-logo zoom-image" />
     </b-navbar-brand>
+
+    <!-- Botão de toggle para telas menores -->
     <b-navbar-toggle target="nav-collapse">
       <template #default="{ expanded }">
         <b-icon
@@ -19,6 +23,8 @@
         <b-icon v-else icon="chevron-bar-down" :style="toggleStyle"></b-icon>
       </template>
     </b-navbar-toggle>
+
+    <!-- Conteúdo do menu à direita -->
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto m-3">
         <b-nav-item :style="navTextStyle" to="/">Início</b-nav-item>
@@ -45,5 +51,3 @@
 
 <script src="./Navbar.js"></script>
 <style src="./Navbar.css" scoped></style>
-
-
