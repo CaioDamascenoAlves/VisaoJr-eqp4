@@ -42,6 +42,7 @@ export default {
     NossasEmpresas,
     Footer,
     FaleConoscoVue,
+    RedesSociais,
   },
 };
 </script>
