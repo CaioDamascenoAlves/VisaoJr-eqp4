@@ -1,13 +1,18 @@
 <template>
   <b-navbar
+    ref="navbar"
     sticky
     toggleable="lg"
     :variant="currentVariant"
     class="mb-5"
     :style="navbarStyle"
   >
-  <b-navbar-brand>
-      <img src="../../assets/imgs/LogoWjOri.png" alt="Logo" class="navbar-logo zoom-image" />
+    <b-navbar-brand>
+      <img
+        src="../../assets/imgs/LogoWjOri.png"
+        alt="Logo"
+        class="navbar-logo zoom-image"
+      />
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse">
       <template #default="{ expanded }">
@@ -30,7 +35,6 @@
           <b-dropdown-item
             v-for="(empresa, index) in empresas"
             :key="index"
-            :to="empresa.to"
             :style="navTextStyle"
             @click="scrollToEmpresa(index)"
           >
@@ -45,5 +49,3 @@
 
 <script src="./Navbar.js"></script>
 <style src="./Navbar.css" scoped></style>
-
-

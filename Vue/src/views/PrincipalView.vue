@@ -14,9 +14,13 @@
     <section id="fale-conosco">
       <FaleConoscoVue />
     </section>
+    
+    <section id="sociais-icons">
+      <SociaisIconsFooter />
+    </section>
 
     <section id="footer">
-      <Footer />
+      <Footer></Footer>
     </section>
 
   </div>
@@ -29,6 +33,7 @@ import NossasEmpresas from "../components/NossasEmpresas.vue";
 import Footer from "../components/FooterComp.vue";
 import FaleConoscoVue from "../components/FaleConosco.vue";
 import Inicio from "../components/Inicio.vue";
+import SociaisIconsFooter from "../components/SociaisIconsFooter.vue";
 
 export default {
   components: {
@@ -38,6 +43,7 @@ export default {
     Footer,
     FaleConoscoVue,
     Inicio,
+    SociaisIconsFooter,
   },
 };
 </script>
