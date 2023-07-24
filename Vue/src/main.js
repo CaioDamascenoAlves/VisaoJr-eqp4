@@ -20,6 +20,8 @@ Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);
 
 Vue.config.productionTip = false;
+Vue.config.devtools = true;
+Vue.config.performance = true;
 
 new Vue({
   store,
