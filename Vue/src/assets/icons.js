@@ -16,9 +16,15 @@ import {
   faLocationDot,
   faEnvelope,
   faPhone,
-
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faFacebook,
+  faWhatsapp,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 library.add(
   faUserPlus,
   faUserEdit,
@@ -35,5 +41,10 @@ library.add(
   faLocationDot,
   faEnvelope,
   faPhone,
+  faInstagram,
+  faFacebook,
+  faWhatsapp,
+  faYoutube
 );
+
 Vue.component("font-awesome-icon", FontAwesomeIcon);
