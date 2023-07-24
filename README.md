@@ -4,8 +4,7 @@ Projeto frontend equipe quatro, Visão.
 # Organização dos Diretórios
 
 - A proposta e requisitos do projeto podem ser encontrados na pasta `Proposta Projeto`.
-- O projeto sem o uso de framework deve ser desenvolvido na pasta `Sem framework`.
-- O projeto usando o framework VueJS deve ser desenvolvido na pasta `Vue`.
+- O projeto finalizado usando o framework VueJS deve ser desenvolvido na pasta `Vue`.
   
 # Configuração do Ambiente de Desenvolvimento
 
