@@ -6,6 +6,7 @@
     :variant="currentVariant"
     class="mb-5"
     :style="navbarStyle"
+    style="box-shadow: 0px 2px 4px rgb(0,0,0,0.1);"
   >
     <b-navbar-brand>
       <img
@@ -25,7 +26,7 @@
       </template>
     </b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-auto m-3">
+      <b-navbar-nav class="ml-auto navbar-items">
         <b-nav-item :style="navTextStyle" to="/">Início</b-nav-item>
         <b-nav-item :style="navTextStyle" to="/sobre-nos">Sobre Nós</b-nav-item>
         <b-nav-item-dropdown :style="navTextStyle">
