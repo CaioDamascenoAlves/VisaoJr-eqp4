@@ -19,16 +19,6 @@ export default new Vuex.Store({
     updateTextColor(state, textColor) {
       state.textColor = textColor;
     },
-    scrollToEmpresa(index) {
-      const targetElement = this.$refs.empresaSections[index];
-      if (targetElement) {
-        const scrollOptions = {
-          top: targetElement.offsetTop,
-          behavior: "smooth",
-        };
-        window.scrollTo(scrollOptions);
-      }
-    },
   },
   actions: {
     setCurrentVariant({ commit }, variant) {
@@ -41,6 +31,5 @@ export default new Vuex.Store({
       commit("updateTextColor", color);
     },
   },
-
   modules: {},
 });
